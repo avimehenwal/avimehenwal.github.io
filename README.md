@@ -1,2 +1,2 @@
 # avimehenwal.github.io
-Github Organizational Site
+This is my personal website.
