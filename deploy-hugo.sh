@@ -8,6 +8,7 @@
 # https://github.com/mesuutt/mesuutt.github.io/
 
 SITE=~/Desktop/site
+echo 'Temporary location : $SITE'
 
 if [[ $(git diff --name-only) ]]; then
     echo 'Commit or stash changes before deploy.'
@@ -26,17 +27,18 @@ fi
 hugo -d public
 
 # move generated files to /tmp
-rm -rf $SITE
-mv public $SITE
+mkdir -p $SITE
+rm -rvf $SITE
+mv -v public $SITE
 
 git checkout master
 
 # Remove all files in master branch
-rm -rf `pwd`/*
+rm -vrf `pwd`/*
 
 # Move all generated files from public directory to here
-mv $SITE/* .
-rm -r $SITE
+mv -v $SITE/* .
+rm -rv $SITE
 
 # Add new created files.
 git add .
@@ -51,3 +53,4 @@ if [[ $_untracked_files_exist -eq "1" ]]; then
     git stash pop
     git reset .
 fi
+echo "DONE"
