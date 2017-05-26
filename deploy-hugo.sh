@@ -41,7 +41,7 @@ rm -r $SITE
 # Add new created files.
 git add .
 git commit -m 'Site updated'
-git push
+git push master
 
 # Go back develop branch and pop changes from stash
 git checkout -
