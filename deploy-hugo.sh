@@ -7,6 +7,8 @@
 # master branch keeps generated website files
 # https://github.com/mesuutt/mesuutt.github.io/
 
+SITE=~/Desktop/site
+
 if [[ $(git diff --name-only) ]]; then
     echo 'Commit or stash changes before deploy.'
     echo 'Untracked files will be stash automatically.'
@@ -24,8 +26,8 @@ fi
 hugo -d public
 
 # move generated files to /tmp
-rm -rf /tmp/public
-mv public /tmp
+rm -rf $SITE
+mv public $SITE
 
 git checkout master
 
@@ -33,8 +35,8 @@ git checkout master
 rm -rf `pwd`/*
 
 # Move all generated files from public directory to here
-mv /tmp/public/* .
-rm -r /tmp/public/
+mv $SITE/* .
+rm -r $SITE
 
 # Add new created files.
 git add .
