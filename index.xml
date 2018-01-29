@@ -33,6 +33,16 @@ Facebook | on Amazon | Google+</description>
     </item>
     
     <item>
+      <title>Dockerised Python Webapp</title>
+      <link>https://avimehenwal.github.io/projects/dockerised-python-webapp/</link>
+      <pubDate>Mon, 29 Jan 2018 16:25:09 +0530</pubDate>
+      
+      <guid>https://avimehenwal.github.io/projects/dockerised-python-webapp/</guid>
+      <description>Dockerised python webapp A dockerised python webapplication build to demonstrate the ease of deployment within containers and speeding up release process.
+https://github.com/avimehenwal/cherrypy-app</description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>https://avimehenwal.github.io/contact/</link>
       <pubDate>Thu, 09 Mar 2017 13:23:28 +0800</pubDate>
